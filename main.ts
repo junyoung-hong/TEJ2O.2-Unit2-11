@@ -4,11 +4,12 @@
  * This program compare two random numbers.
 */
 
-//start
+//variables
 basic.showIcon(IconNames.Happy)
 const number1 = randint(0, 99)
 const number2 = randint(0, 99)
 
+//Pressed A
 input.onButtonPressed(Button.A, function() {
     basic.clearScreen()
     basic.showString( number1 .toString())
@@ -16,6 +17,7 @@ input.onButtonPressed(Button.A, function() {
     basic.showIcon(IconNames.Happy)
 })
    
+//Pressed B
 input.onButtonPressed(Button.B, function() {
     basic.clearScreen()
     basic.showString( number2 .toString())
@@ -23,6 +25,7 @@ input.onButtonPressed(Button.B, function() {
     basic.showIcon(IconNames.Happy)
 })
 
+//Shake the microbit
 input.onGesture(Gesture.Shake, function() {
     basic.clearScreen()
 
