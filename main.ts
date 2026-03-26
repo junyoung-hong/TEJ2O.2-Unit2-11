@@ -6,24 +6,24 @@
 */
 
 //variables
-let number1 : number
-let number2 : number 
+let firstnumber : number
+let secondnumber : number 
 
 //start
 basic.showIcon(IconNames.Happy)
-number1 = randint(0, 99)
-number2 = randint(0, 99)
+firstnumber = randint(0, 99)
+secondnumber = randint(0, 99)
 
 input.onButtonPressed(Button.A, function() {
     basic.clearScreen()
-    basic.showString( number1 .toString())
+    basic.showString( firstnumber .toString())
     basic.clearScreen()
     basic.showIcon(IconNames.Happy)
 })
    
 input.onButtonPressed(Button.B, function() {
     basic.clearScreen()
-    basic.showString( number2 .toString())
+    basic.showString( secondnumber .toString())
     basic.clearScreen()
     basic.showIcon(IconNames.Happy)
 })
@@ -31,14 +31,14 @@ input.onButtonPressed(Button.B, function() {
 input.onGesture(Gesture.Shake, function() {
     basic.clearScreen()
 
-    if (number1 < number2) { 
+    if (firstnumber < secondnumber) { 
         basic.clearScreen()
-        basic.showString(number1.toString() + '<' + number2.toString())
+        basic.showString(firstnumber.toString() + '<' + secondnumber.toString())
         basic.showIcon(IconNames.Happy)
     
     } else { 
         basic.clearScreen()
-        basic.showString(number1.toString() + '>' + number2.toString())
+        basic.showString(firstnumber.toString() + '>' + secondnumber.toString())
         basic.showIcon(IconNames.Sad)
     }
 })
