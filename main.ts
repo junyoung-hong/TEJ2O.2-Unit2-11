@@ -1,29 +1,28 @@
 /* Copyright (c) 2026 MTHS All rights reserved
- *
  * Created by: Junyoung
  * Created on: Mar 2026
  * This program compare two random numbers.
 */
 
 //variables
-let firstnumber : number
-let secondnumber : number 
+let number1 : number 
+let number2 : number 
 
 //start
 basic.showIcon(IconNames.Happy)
-firstnumber = randint(0, 99)
-secondnumber = randint(0, 99)
+number1 = randint(0, 99)
+number2 = randint(0, 99)
 
 input.onButtonPressed(Button.A, function() {
     basic.clearScreen()
-    basic.showString( firstnumber .toString())
+    basic.showString( number1 .toString())
     basic.clearScreen()
     basic.showIcon(IconNames.Happy)
 })
    
 input.onButtonPressed(Button.B, function() {
     basic.clearScreen()
-    basic.showString( secondnumber .toString())
+    basic.showString( number2 .toString())
     basic.clearScreen()
     basic.showIcon(IconNames.Happy)
 })
@@ -31,14 +30,14 @@ input.onButtonPressed(Button.B, function() {
 input.onGesture(Gesture.Shake, function() {
     basic.clearScreen()
 
-    if (firstnumber < secondnumber) { 
+    if (number1 < number2) { 
         basic.clearScreen()
-        basic.showString(firstnumber.toString() + '<' + secondnumber.toString())
+        basic.showString(number1.toString() + '<' + number2.toString())
         basic.showIcon(IconNames.Happy)
     
     } else { 
         basic.clearScreen()
-        basic.showString(firstnumber.toString() + '>' + secondnumber.toString())
+        basic.showString(number1.toString() + '>' + number2.toString())
         basic.showIcon(IconNames.Sad)
     }
 })
